@@ -13,19 +13,12 @@
   <body class="page">
     <div class="page__content">
       <header class="header page__section">
-        <img
-          src="./images/logo.svg"
-          alt="Логотип проекта масто"
-          class="logo header__logo"
-        />
+        <img src="./images/logo.svg" alt="Логотип проекта масто" class="logo header__logo" />
       </header>
 
       <main class="content">
         <section class="profile page__section">
-          <div
-            class="profile__image"
-            style="background-image: url('./images/avatar.jpg')"
-          ></div>
+          <div class="profile__image" style="background-image: url('./images/avatar.jpg')"></div>
           <div class="profile__info">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
             <button class="profile__edit-button" type="button"></button>
@@ -53,6 +46,8 @@
               class="popup__input popup__input_type_name"
               placeholder="Имя"
               required
+              minlength="2"
+              maxlength="40"
             />
             <input
               type="text"
@@ -60,10 +55,10 @@
               class="popup__input popup__input_type_description"
               placeholder="Занятие"
               required
+              minlength="2"
+              maxlength="200"
             />
-            <button type="submit" class="button popup__button">
-              Сохранить
-            </button>
+            <button type="submit" class="button popup__button">Сохранить</button>
           </form>
         </div>
       </div>
@@ -87,9 +82,7 @@
               placeholder="Ссылка на картинку"
               required
             />
-            <button type="submit" class="button popup__button">
-              Сохранить
-            </button>
+            <button type="submit" class="button popup__button">Сохранить</button>
           </form>
         </div>
       </div>

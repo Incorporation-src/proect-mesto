@@ -144,6 +144,8 @@ popupCloseButton.forEach((button) => {
   });
 });
 
+enadleValidation();
+
 loadPreparedCards();
 
 // @todo: Темплейт карточки
