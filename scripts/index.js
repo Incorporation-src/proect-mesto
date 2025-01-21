@@ -81,33 +81,24 @@ function loadPreparedCards() {
   });
 }
 
-// Функция обработки редактирования профиля
 function handleProfileFormSubmit(evt) {
-  // Эта строчка отменяет стандартную отправку формы.
   evt.preventDefault();
 
-  // Получение значений полей jobInput и nameInput из свойства value
   const userName = nameFormInput.value;
   const userJob = jobFormInput.value;
 
-  // Вставка новых значений в текстовые поля профиля
   profileTitle.textContent = userName;
   profileDescription.textContent = userJob;
 
-  // Закрытие модального окна
   closeModal(profilePopup);
 }
 
-// Функция добавления карточки
 function handleCardFormSubmit(evt) {
-  // Эта строчка отменяет стандартную отправку формы.
   evt.preventDefault();
 
-  // Получение значений полей nameCardInput и linkCardInput из свойства value
   const cardName = nameCardInput.value;
   const cardLink = linkCardInput.value;
 
-  // Вставка новой карточки
   const cardElement = createCard(cardName, cardLink);
 
   placesList.prepend(cardElement);
@@ -117,27 +108,20 @@ function handleCardFormSubmit(evt) {
   cardFormElement.reset();
 }
 
-// Функция открытия модального окна
 function openModal(popup) {
   popup.classList.add("popup_is-opened");
 }
 
-// Функция закрытия модального окна
 function closeModal(popup) {
   popup.classList.remove("popup_is-opened");
 
   console.log("Данное модальное окно закрыто");
 }
 
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
 cardFormElement.addEventListener("submit", handleCardFormSubmit);
 
-// Обработчик открытия модального окна
 profileEditButton.addEventListener("click", () => {
   nameFormInput.value = profileTitle.textContent;
   jobFormInput.value = profileDescription.textContent;
@@ -151,7 +135,6 @@ profileAddButton.addEventListener("click", () => {
   console.log("Модальное окно добавления карточки открыто");
 });
 
-// Обработчик закрытия модального окна
 popupCloseButton.forEach((button) => {
   button.addEventListener("click", () => {
     const popup = button.closest(".popup");
