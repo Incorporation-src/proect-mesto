@@ -1,6 +1,6 @@
 # Проектная работа «проект Mesto»
 
-[Cсылка на проект](https://incorporation-src.github.io)
+[Cсылка на проект](https://incorporation-src.github.io/proect-mesto/)
 
 # Описание проекта
 
