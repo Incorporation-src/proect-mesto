@@ -1,0 +1,37 @@
+{
+    "name": "proect-mesto",
+    "version": "3.0.0",
+    "description": "",
+    "license": "ISC",
+    "author": "Nikita Khogoev",
+    "main": "webpack.config.js",
+    "scripts": {
+        "build": "rm -rf dist && webpack --mode production",
+        "build:debug": "webpack --mode production --stats verbose",
+        "dev": "webpack serve",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "core-js": "^3.40.0",
+        "jquerry": "^0.0.1-security",
+        "regenerator-runtime": "^0.14.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.27.1",
+        "@babel/preset-env": "^7.27.2",
+        "autoprefixer": "^10.4.21",
+        "babel-loader": "^10.0.0",
+        "clean-webpack-plugin": "^4.0.0",
+        "core-js": "^3.42.0",
+        "css-loader": "^7.1.2",
+        "cssnano": "^7.0.7",
+        "gh-pages": "^6.3.0",
+        "html-webpack-plugin": "^5.6.3",
+        "mini-css-extract-plugin": "^2.9.2",
+        "postcss-loader": "^8.1.1",
+        "webpack": "^5.99.8",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.1"
+    }
+}
